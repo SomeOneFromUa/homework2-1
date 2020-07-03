@@ -1,0 +1,12 @@
+.post-card {
+  width: 40%;
+  padding: 10px;
+  margin: 5px;
+  border: solid 1px lightslategrey;
+}
+.init {
+  display: none;
+}
+.show {
+  display: block;
+}

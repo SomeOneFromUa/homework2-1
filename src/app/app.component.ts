@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {IPost} from '../modules/postModule';
+import {PostsService} from '../services/posts.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'homework2dot1';
+
+posts: IPost[];
+
+constructor(private postService: PostsService) {
+  postService.getPosts().subscribe(value => this.posts = value);
+}
 }
